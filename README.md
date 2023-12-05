@@ -46,6 +46,11 @@ python process_images.py image1.tif image2.tif
 ```
 python process_images.py [--weights_file <filename>] [--write_nn_mask] [--write_threshold_mask] [--write_area_filtered]
 ```
+### Simple run with GUI
+* You can run a simple process_images.py command for all tif in a folder along with selecting a weights file and save location with the command \:
+```
+python PPGUI.py
+```
 #### Bulk Image Processing Instructions:
    
 * If you are using a bash shell or zsh shell you can use the \*.tif shortcut to loop through all of the images
