@@ -29,7 +29,7 @@ class ProcessImagesThread(QThread):
                 shutil.copy(tif_file, os.getcwd())
                 self.progress_updated.emit(int((index / total_files) * 50))  # Update progress up to 50%
 
-            process_command = f"python process_images.py *.tif --weights_file '{self.weights_file}'"
+            process_command = f"python3 process_images.py *.tif --weights_file '{self.weights_file}'"
             subprocess.run(process_command, shell=True, check=True)
 
             output_folder = self.find_available_folder_name(os.path.join(self.save_folder, 'PP GUI Output'))
